@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lianne Shane A. Enriquez | Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #1e3a8a, #2563eb);
+            color: white;
+            text-align: center;
+            padding: 70px 20px 50px;
+        }
+
+        .hero-icon {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: white;
+            color: #1e3a8a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: bold;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 38px;
+            letter-spacing: 1px;
+        }
+
+        header h2 {
+            margin: 10px 0;
+            font-weight: normal;
+            font-size: 22px;
+        }
+
+        header p {
+            font-size: 16px;
+            opacity: 0.95;
+        }
+
+        /* NAVIGATION */
+        nav {
+            margin-top: 30px;
+        }
+
+        nav a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 5px 8px;
+            padding: 9px 15px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: white;
+            color: #1e3a8a;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* SECTIONS */
+        section {
+            background: white;
+            padding: 35px;
+            margin-bottom: 30px;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+        }
+
+        section h2 {
+            color: #1e3a8a;
+            font-size: 28px;
+            margin-top: 0;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+        }
+
+        section h3 {
+            color: #1e3a8a;
+        }
+
+        .profile {
+            text-align: center;
+        }
+
+        .profile p {
+            max-width: 750px;
+            margin: 15px auto;
+        }
+
+        /* HIGHLIGHTS */
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .highlight {
+            padding: 20px;
+            border-radius: 14px;
+            background: #eff6ff;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .highlight:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.15);
+        }
+
+        .highlight-icon {
+            font-size: 30px;
+        }
+
+        .highlight h3 {
+            margin: 8px 0;
+        }
+
+        /* PROJECTS */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .project {
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 15px;
+            border-top: 5px solid #2563eb;
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 12px;
+            background: #dbeafe;
+            color: #1e3a8a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 27px;
+            margin-bottom: 15px;
+        }
+
+        .project h3 {
+            margin-top: 0;
+            color: #1e3a8a;
+        }
+
+        .project p {
+            font-size: 15px;
+        }
+
+        .project-tag {
+            display: inline-block;
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* SKILLS */
+        .skill-category {
+            margin-bottom: 30px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .skill {
+            padding: 18px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            border-color: #2563eb;
+            transform: translateY(-3px);
+        }
+
+        .skill strong {
+            display: block;
+            color: #1e3a8a;
+            margin-bottom: 5px;
+        }
+
+        /* CONTACT */
+        .contact-box {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .contact-item {
+            background: #eff6ff;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .contact-item strong {
+            color: #1e3a8a;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-item a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* BUTTON */
+        .button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 11px 20px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #1e3a8a;
+            transform: translateY(-2px);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #172554;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 7px 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* MOBILE */
+        @media (max-width: 800px) {
+
+            header h1 {
+                font-size: 29px;
+            }
+
+            header h2 {
+                font-size: 18px;
+            }
+
+            .projects,
+            .highlights,
+            .skills-grid,
+            .contact-box {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 25px;
+            }
+
+            nav a {
+                margin: 3px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header id="home">
+
+        <div class="hero-icon">
+            LE
+        </div>
+
+        <h1>LIANNE SHANE A. ENRIQUEZ</h1>
+
+        <h2>Web Page Development Portfolio</h2>
+
+        <p>Student | Aspiring IT Professional | Future Web Developer</p>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+
+        <!-- ABOUT ME -->
+        <section id="about" class="profile">
+
+            <h2>About Me</h2>
+
+            <p>
+                Hello! I am <b>Lianne Shane A. Enriquez</b>, a college student
+                interested in technology, web development, and learning new
+                computer skills.
+            </p>
+
+            <p>
+                I am currently building my knowledge in programming,
+                computer hardware, troubleshooting, and web page development.
+                I enjoy learning through hands-on activities and projects.
+            </p>
+
+            <p>
+                My goal is to continue improving my technical skills and
+                become a capable, responsible, and successful IT professional.
+            </p>
+
+            <div class="highlights">
+
+                <div class="highlight">
+                    <div class="highlight-icon">💻</div>
+                    <h3>Web Development</h3>
+                    <p>Learning how to create and design functional webpages.</p>
+                </div>
+
+                <div class="highlight">
+                    <div class="highlight-icon">🛠️</div>
+                    <h3>IT Skills</h3>
+                    <p>Developing knowledge in computers, hardware, and troubleshooting.</p>
+                </div>
+
+                <div class="highlight">
+                    <div class="highlight-icon">🚀</div>
+                    <h3>Continuous Learning</h3>
+                    <p>Always improving skills through activities and projects.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PORTFOLIO -->
+        <section id="portfolio">
+
+            <h2>My Portfolio</h2>
+
+            <p>
+                Below are some of my web development activities and projects
+                that demonstrate my understanding of HTML and basic webpage
+                development.
+            </p>
+
+            <div class="projects">
+
+                <div class="project">
+
+                    <div class="project-icon">
+                        📄
+                    </div>
+
+                    <h3>HTML Resume</h3>
+
+                    <p>
+                        A personal resume webpage created using basic HTML
+                        elements to present personal information, education,
+                        and skills in an organized format.
+                    </p>
+
+                    <span class="project-tag">HTML</span>
+                    <span class="project-tag">Resume</span>
+
+                </div>
+
+
+                <div class="project">
+
+                    <div class="project-icon">
+                        📋
+                    </div>
+
+                    <h3>HTML Lists Activity</h3>
+
+                    <p>
+                        A webpage demonstrating ordered and unordered lists
+                        using HTML, including examples of movies, fruits,
+                        songs, and cartoon characters.
+                    </p>
+
+                    <span class="project-tag">HTML</span>
+                    <span class="project-tag">Lists</span>
+
+                </div>
+
+
+                <div class="project">
+
+                    <div class="project-icon">
+                        🌐
+                    </div>
+
+                    <h3>Personal Portfolio</h3>
+
+                    <p>
+                        My individual portfolio project demonstrating webpage
+                        structure, headings, paragraphs, links, sections,
+                        navigation, styling, and HTML organization.
+                    </p>
+
+                    <span class="project-tag">HTML</span>
+                    <span class="project-tag">CSS</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SKILLS -->
+        <section id="skills">
+
+            <h2>Skills and Technologies</h2>
+
+            <div class="skill-category">
+
+                <h3>💻 Technical Skills</h3>
+
+                <div class="skills-grid">
+
+                    <div class="skill">
+                        <strong>HTML</strong>
+                        <span>Basic webpage structure and content.</span>
+                    </div>
+
+                    <div class="skill">
+                        <strong>CSS</strong>
+                        <span>Basic styling, layout, colors, and design.</span>
+                    </div>
+
+                    <div class="skill">
+                        <strong>Web Development</strong>
+                        <span>Creating simple and organized webpages.</span>
+                    </div>
+
+                    <div class="skill">
+                        <strong>Programming</strong>
+                        <span>Basic understanding of programming concepts.</span>
+                    </div>
+
+                    <div class="skill">
+                        <strong>Computer Hardware</strong>
+                        <span>Basic knowledge of computer components.</span>
+                    </div>
+
+                    <div class="skill">
+                        <strong>Troubleshooting</strong>
+                        <span>Basic computer problem-solving skills.</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-category">
+
+                <h3>🌟 Personal Skills</h3>
+
+                <div class="skills-grid">
+
+                    <div class="skill">
+                        <strong>Willingness to Learn</strong>
+                        <span>Open to learning new technologies and skills.</span>
+                    </div>
+
+                    <div class="skill">
+                        <strong>Time Management</strong>
+                        <span>Organizing tasks and completing activities responsibly.</span>
+                    </div>
+
+                    <div class="skill">
+                        <strong>Teamwork</strong>
+                        <span>Working effectively with classmates and others.</span>
+                    </div>
+
+                    <div class="skill">
+                        <strong>Communication</strong>
+                        <span>Sharing ideas and information clearly.</span>
+                    </div>
+
+                    <div class="skill">
+                        <strong>Problem Solving</strong>
+                        <span>Finding practical solutions to challenges.</span>
+                    </div>
+
+                    <div class="skill">
+                        <strong>Creativity</strong>
+                        <span>Using ideas to improve projects and presentations.</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+        <section id="contact">
+
+            <h2>Contact Me</h2>
+
+            <p>
+                If you have questions or inquiries about my portfolio,
+                you may contact me through the information below.
+            </p>
+
+            <div class="contact-box">
+
+                <div class="contact-item">
+
+                    <strong>👤 Name</strong>
+
+                    Lianne Shane A. Enriquez
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>📧 Email</strong>
+
+                    <a href="mailto:lianneshanee@gmail.com">
+                        lianneshanee@gmail.com
+                    </a>
+
+                </div>
+
+            </div>
+
+            <a class="button" href="mailto:lianneshanee@gmail.com">
+                Contact Me
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            <b>Lianne Shane A. Enriquez</b>
+        </p>
+
+        <p>
+            Web Page Development Portfolio
+        </p>
+
+        <p>
+            &copy; 2026 Lianne Shane A. Enriquez | Individual Portfolio
+        </p>
+
+        <p>
+            <a href="#home">Back to Top ↑</a>
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
